@@ -1,3 +1,18 @@
 h1. CoffeeMod
 
 Hacked Coffee Maker for CampZone 2012
+
+
+h2. Copyright
+
+Copyright © 2011
+
+* Miep
+* Boemlauw
+* Dennus
+* DMXTech
+* Brambo123
+
+h2. License
+
+This project is is licensed under the terms of the GPL License, see the included GPL-LICENSE file
