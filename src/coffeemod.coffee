@@ -30,7 +30,6 @@ class CoffeeMod
   start: (opts) ->
     @options = opts || {}
     
-    Log.debug "SQLite database initialized"
     bot = adapters.IRC(nickname: @options.irc)
     adapters.web(irc: bot)
     
