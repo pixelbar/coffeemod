@@ -1,6 +1,6 @@
 h1. CoffeeMod
 
-Hacked Coffee Maker for CampZone 2012 (biggest outside LAN-party). We are working on an Arduino based coffeemaker controller (10 liter coffee). So we can monitor how much coffee is made during the event.
+Hacked Coffee Maker for CampZone 2012 (the biggest outside LAN-party). We are working on an Arduino based coffeemaker controller (max. 310 liter coffee pot). So we can monitor how much coffee is made during the event.
 
 !http://f.cl.ly/items/2N1A113m0b0G2p340W1T/photo.JPG(controller)!
 
