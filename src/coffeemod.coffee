@@ -29,5 +29,6 @@ class CoffeeMod
   start: (opts) ->
     @options = opts || {}
     adapters.IRC(nickname: @options.irc)
+    adapters.web()
     
 exports.CoffeeMod = CoffeeMod
