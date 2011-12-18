@@ -1,8 +1,9 @@
 cli = require('cli').enable('version')
 daemon = require('daemon')
 {Log}   = require('./log')
+{DB}  = require('./db')
 
-adapters = require('./adapters').Adapters
+adapters = new require('./adapters').Adapters
 Config = require('./config').Config
 
 class CoffeeMod
@@ -28,7 +29,12 @@ class CoffeeMod
       
   start: (opts) ->
     @options = opts || {}
-    adapters.IRC(nickname: @options.irc)
-    adapters.web()
+    
+    db = new DB()
+    
+    db.setup =>
+      Log.debug "SQLite database initialized"
+      bot = adapters.IRC(nickname: @options.irc)
+      adapters.web(irc: bot, db: db)
     
 exports.CoffeeMod = CoffeeMod
