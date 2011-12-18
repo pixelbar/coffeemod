@@ -1,7 +1,8 @@
 {
 	"version": "v0.1",
-	"host": "localhost",
-	"user": "db username",
-	"pass": "db password",
-	"database": "select db"
+	"host": "",
+	"user": "",
+	"pass": "",
+	"database": "",
+	"table": ""
 }

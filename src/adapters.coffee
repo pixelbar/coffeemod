@@ -1,6 +1,7 @@
 irc = require('irc')
 {Log}   = require('./log')
 express = require('express')
+mysql = require('mysql')
 
 class Adapters
   @IRC: (opts) ->
@@ -18,6 +19,9 @@ class Adapters
     
     bot = options.irc
     app = express.createServer()
+    db = mysql.createClient(user: 'root', password: 'root')
+    
+    
     
     app.get '/make/:sort/:liters', (req, res) ->
       switch req.params.sort
