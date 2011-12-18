@@ -3,7 +3,7 @@ daemon = require('daemon')
 {Log}   = require('./log')
 {DB}  = require('./db')
 
-adapters = new require('./adapters').Adapters
+adapters = require('./adapters').Adapters.init()
 Config = require('./config').Config
 
 class CoffeeMod
@@ -31,6 +31,6 @@ class CoffeeMod
     @options = opts || {}
     
     bot = adapters.IRC(nickname: @options.irc)
-    adapters.web(irc: bot)
+    adapters.web(irc: bot, config: @config)
     
 exports.CoffeeMod = CoffeeMod
