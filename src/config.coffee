@@ -8,8 +8,7 @@ class Config
     try
       contents = fs.readFileSync(path, "utf-8")
       config = JSON.parse(contents)
-      
-      #config.watchFolder = config.watchFolder.replace("~", process.env.HOME)
+	  
     catch error
       Log.error "Unable to read and/or find config file"
       return null
